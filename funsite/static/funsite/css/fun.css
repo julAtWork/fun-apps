@@ -10,6 +10,14 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+.course-block a {
+	display:block;
+	width:100%;
+}
+.course-block a:focus, .course-block a:hover {
+	border-bottom: 2px solid #EEE;
+	box-shadow: .5em .5em 3px rgba(80,80,80,.9);
+}
 
 .color-athens-grey {
     color: #EFF0F1 !important;
@@ -108,12 +116,10 @@ body {
 a,
 a:active,
 a:focus {
-    text-decoration: none;
     color: #2579BE;
 }
 a:hover {
     color: #FE3925;
-    text-decoration: none;
 }
 
 
