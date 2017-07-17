@@ -28,13 +28,13 @@ DEFAULT_AGREEMENT_WHITELIST = map(
         r"""^/?$""",
     )
 )
+def get(self, key, default):
+    return getattr(self, key) if hasattr(self, key) else default
+
 LMS_BASE = get(settings, "LMS_BASE", "")
 PROT = get(settings, "HTTPS", "off") == "on" and "s" or ""
 LMS_REDIR = LMS_BASE and ("http%s://%s/" % (PROT, LMS_BASE)) or ""
 DEFAULT_AGREEMENT_FORM = "%s/payment/terms/" % (LMS_REDIR)
-
-def get(self, key, default):
-    return getattr(self, key) if hasattr(self, key) else default
 
 def terms_accepted(func):
     """
