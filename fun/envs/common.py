@@ -32,6 +32,9 @@ PLATFORM_TWITTER_ACCOUNT = '@funmooc'
 # those 2 constants are used in code to describe certificate, they are not i18ned, you could do it
 CERT_NAME_SHORT = u"Attestation"
 CERT_NAME_LONG = u"Attestation de réussite"
+SESSION_COOKIE_HTTPONLY=True
+CSRF_COOKIE_HTTPONLY=True
+
 
 ADMINS = [['funteam', 'dev@france-universite-numerique-mooc.fr']]
 
@@ -386,5 +389,6 @@ CKEDITOR_CONFIGS = {
 
 ENABLE_ADWAYS_FOR_COURSES = (
     'course-v1:SciencesPo+05008+session01',
+    'course-v1:Paris1+16007+session01',
     'course-v1:SciencesPo+05008ENG+session01',
 )
